@@ -3,6 +3,51 @@
 /* CSS variables should be named with alphanumeric characters, underscores, and dashes. Remember that they are case-sensitive. */
 
 :root {
-  
+    /* ~Light */
+  --text-base: #333;
+  --text-primary: rgb(171, 101, 113);
+  --base-font-family: Avenir, Helvetica, Arial, sans-serif;
+  --alt-font-family: Georgia, serif;
+
+    /* ~Dark */
 }
+
+
+
+body {
+    color: var(--text-base);
+    font-family: var(--base-font-family);
+}
+
+h1,
+h2 {
+    font-family: var(--alt-font-family);
+}
+
+h2 {
+   color: var(--text-primary); 
+}
+
+.logical-card {
+    align-items: center;
+    background-color:  #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    padding: 1rem;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    padding-inline-end: 2rem;
+    display: flex;
+
+}
+
+.avatar {
+    background-color: lightblue;
+    inline-size: 80px;
+    block-size:  80px;
+    flex-shrink: 0;
+    border-radius: 100%;
+    margin-inline-end: 2rem; /* works for both RTL LTR */
+}
+
 

@@ -96,3 +96,61 @@ input {
   border-radius: 5px;
   padding: 5px 10px;
 }
+
+/* is and where and not*/
+
+:is(ol[class]) {
+  list-style-type: none;
+}
+
+.second-list {
+  list-style-type: decimal;
+}
+
+:is(.test) p {
+  color: blue;
+}
+
+header p {
+  color: green;
+}
+
+
+/* Container Queries */
+
+.container-query {
+  display: grid;
+  grid-template-columns: repeat(auto-fit minmax(200px,lfr));
+  gap: 2rem;
+}
+
+
+.card-container {
+  container-type: inline-size;
+
+}
+
+
+@container (min-width: 200px) {
+  .card-link {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .card-image {
+    width: min-content;
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+@container (min-width: 700px) {
+  .card-link {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+}
